@@ -1,0 +1,116 @@
+/* Keeps the navigation bar fixed at the top of the screen*/
+.navcontainer {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/*Float all the items to the left*/
+ul.nav li {
+    float: left;
+}
+
+/*LANGUAGE DROPDOWN MENU DISPLAY CHANGED HERE*/
+/*change later once language feature is done*/
+ul.nav li.dropdown a{
+  display: none;
+}
+/*Float the right class to the right to seperate home icon and rest of tabs*/
+.right {float: right;}
+
+.active {
+  background-color: #DFEEFF;
+}
+
+ul.nav li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 57px;
+}
+
+/*Changes the color of the items in the menu when hovered over*/
+ul.nav li a:hover:not(.logo), .dropdown:hover .dropbtn {
+    background-color: gray;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.nav li.icon {display: none;}
+
+/*Shows display of dropdown menu*/
+ul.nav li.dropdown {
+    display: inline-block;
+}
+
+ul.nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+ul.nav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+ul.nav .dropdown-content a:hover {background-color: #f1f1f1}
+
+ul.nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Adjust the navbar to just show the clickable menu icon when the screen width decreases below 1050px */
+@media screen and (max-width:1050px) {
+  ul.nav li:not(:first-child), ul.nav li.dropdown {display: none;}
+  ul.nav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:1050px) {
+  ul.nav.responsive {position: relative;}
+  ul.nav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.nav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.nav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  /*FOR NOW, LET LANGUAGE DROPDOWN MENU BE HIDDEN. DELETE THIS STYLE ONLY WHEN LANGUAGES READY*/
+  ul.nav li.dropdown a {
+  display: none;
+  }
+  ul.nav.responsive .dropdown-content {
+      display: none;
+      position: relative;
+      background-color: #f9f9f9;
+      min-width: 160px;
+  }
+}

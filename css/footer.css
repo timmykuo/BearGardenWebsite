@@ -1,0 +1,131 @@
+/*styles for footnotes */
+.footer {
+  margin: 0;
+  padding: 0;
+  background-color: #DFEEFF;
+}
+
+ul.footer-nav-list-1,
+ul.footer-nav-list-2,
+ul.footer-nav-list-3 {
+  list-style: none;
+}
+
+/*style heading and footnote links for tabs smaller than tablet size*/
+  li.footer-nav-heading a {
+    font-size: 150%;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /*slightly more than normal (400)*/
+    text-decoration: none;
+    color: black;
+  }
+
+  li.footer-nav-heading {
+    padding-bottom: 10px;
+  }
+
+  /*styles links to footnote htmls*/
+  .footer-nav-content li a {
+    padding-bottom: 15px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: gray;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+  }
+/*styles heading and footnote links for the tabs when larger than tablet size*/
+@media only screen and (min-width: 768px) {
+  li.footer-nav-heading a {
+    padding-left: 40px;
+  }
+
+  .footer-nav-content li a {
+    padding-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  li.footer-nav-heading a {
+    padding-left: 80px;
+  }
+
+  .footer-nav-content li a {
+    padding-left: 80px;
+  }
+}
+
+/*increases link size when hovered over*/
+.footer-nav-content li a.footer-nav-link:hover {
+  font-style: bold;
+  font-size: 105%;
+}
+
+/*styles bottom contact information*/
+.info {
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.info a {
+  text-decoration: none;
+  color: blue;
+}
+
+/*Adjust the footer to just show category name when the screen width decreases below 768px */
+@media screen and (min-width: 768px) {
+  ul.footer-nav-list-1 li.footer-nav-heading a,
+  ul.footer-nav-list-2 li.footer-nav-heading a,
+  ul.footer-nav-list-3 li.footer-nav-heading a  {
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+  ul.footer-nav-list-1 li:not(.footer-nav-heading),
+  ul.footer-nav-list-2 li:not(.footer-nav-heading),
+  ul.footer-nav-list-3 li:not(.footer-nav-heading) {display: none;}
+  ul.nav li.footer-nav-heading {
+    float: left;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:768px) {
+  ul.footer-nav-list-1.responsive,
+  ul.footer-nav-list-2.responsive,
+  ul.footer-nav-list-3.responsive {position: relative;}
+
+  ul.footer-nav-list-1.responsive li.footer-nav-heading,
+  ul.footer-nav-list-2.responsive li.footer-nav-heading,
+  ul.footer-nav-list-3.responsive li.footer-nav-heading {
+    position: relative;
+    left: 0;
+    top: 0;
+    font-family: Gotham SSm, Tahoma, Geneva, sans-serif;
+    text-decoration: none;
+  }
+
+  /*bolds and changes font to text when tabs are highlighted*/
+  ul.footer-nav-list-1:not(.responsive) li.footer-nav-heading a:hover,
+  ul.footer-nav-list-2:not(.responsive) li.footer-nav-heading a:hover,
+  ul.footer-nav-list-3:not(.responsive) li.footer-nav-heading a:hover {
+    font-style: bold;
+    color: gray;
+  }
+
+
+  ul.footer-nav-list-1.responsive .footer-nav-content li ,
+  ul.footer-nav-list-2.responsive .footer-nav-content li,
+  ul.footer-nav-list-3.responsive .footer-nav-content li   {
+    float: none;
+    display: inline;
+  }
+
+  ul.footer-nav-list-1.responsive .footer-nav-content li  a,
+  ul.footer-nav-list-2.responsive .footer-nav-content li  a,
+  ul.footer-nav-list-3.responsive .footer-nav-content li  a {
+    display: block;
+    text-align: left;
+  }
+}
