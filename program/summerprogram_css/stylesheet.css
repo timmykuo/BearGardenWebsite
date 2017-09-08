@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For small tablets: */
+    .col-m-0 {width: 0%;}
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    /* For large tablets: */
+    .col-0 {width: 0%;}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 1024px) {
+    /* For desktop: */
+    .col-t-0 {width: 0%;}
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+}
+
+/*styles for intro of program page */
+/*background picture for mobile*/
+.container {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-style: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid ;
+    margin: 1em;
+}
+
+.header {
+  background-color: pink;
+  position: relative;
+  margin: auto;
+  height: 250px;
+}
+
+.header .logo {
+  padding-top: 100px;
+  margin: auto;
+  max-width: 100%;
+}
+
+.header h1{
+  padding-left: 1em;
+  object-fit: contain;
+  font-size: 275%;
+}
+
+.header img {
+  max-height: 75px;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+@media only screen and (min-width: 600px) {
+  hr {
+    margin: 1em 5%;
+  }
+
+  .container {
+    padding: 0 5%;
+  }
+
+  .header .logo {
+    padding-top: 100px;
+    margin: auto;
+    max-width: 75%;
+  }
+
+  .header h1{
+    padding-left: 12%;
+    font-size: 300%;
+    font-weight: 600;
+  }
+
+  .header img {
+    max-height: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  hr {
+    margin: 1em 12%;
+  }
+
+  .container {
+    padding: 0 7%;
+  }
+
+  .header .logo {
+    padding-top: 100px;
+    margin: auto;
+    max-width: 61%;
+  }
+
+  .header h1{
+    padding-left: 13%;
+    font-size: 300%;
+    font-weight: 600;
+  }
+
+  .header img {
+    max-height: 80px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  hr {
+    margin: 1em 18%;
+  }
+
+  .container {
+    padding: 0 11%;
+  }
+
+  .header .logo {
+    padding-top: 100px;
+    margin: auto;
+    max-width: 70%;
+    overflow: hidden;
+  }
+
+  .header h1{
+    padding-left: 23.5%;
+    font-size: 350%;
+    font-weight: 600;
+  }
+
+  .header img {
+    max-height: 95px;
+  }
+}
+
+.intro {
+  padding: 15px;
+}
+
+.hline-bottom {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid; /* whichever color you prefer */
+}
+
+.details {
+  background-color: #DFEEFF;
+  padding-bottom: 10px;
+}
+
+.details h3 {
+  text-align: center;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: white;
+  display: inline-block;
+  margin: 10px 35px;
+  float: left;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 600px) {
+  .body {
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .body {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    clear: both;
+  }
+}
+
+
+
+.register {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #78F57A;
+  text-align: center;
+}
+
+/*schedule styles*/
+.centerTable {
+  margin: 0px auto;
+}
+
+.schedule table{
+  vertical-align: middle;
+  font-size: 115%;
+}
+td {
+  width: 200px;
+}

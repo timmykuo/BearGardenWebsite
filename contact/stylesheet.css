@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #95C6E5;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-0 {width: 0%;}
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-0 {width: 0%;}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/*Styles for contact form */
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    padding-left: 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+  margin: 5% 0%;
+  border-radius: 5px;
+  background-color:rgba(72,72,72,0.4);
+  padding: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    margin: 5% 10%;
+    border-radius: 5px;
+    background-color:rgba(72,72,72,0.4);
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container {
+    margin: 5% 12%;
+    border-radius: 5px;
+    background-color:rgba(72,72,72,0.4);
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width:1050px) {
+  .container {
+    margin: 5% 15%;
+    border-radius: 5px;
+    background-color:rgba(72,72,72,0.4);
+    padding: 20px;
+    padding-bottom: 45px;
+  }
+}
+/*remove display of portrait when mobile size*/
+@media only screen and (max-width: 600px) {
+  .container .contact_form .row #header img {
+    display: none;
+  }
+}
+
+.bubble {
+  margin: 2% 0.5%;
+  width: 100%;
+  padding: 70px 10px;
+  background: #FFFFFF;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-size: 180%;
+  text-align: center;
+}
+
+
+/*speech bubble styles for tablets*/
+@media only screen and (min-width: 600px) {
+  .bubble {
+    position: relative;
+    margin: 2% 0.5%;
+    width: 47%;
+    padding: 70px 10px;
+    background: #FFFFFF;
+    -webkit-border-radius: 42px;
+    -moz-border-radius: 42px;
+    border-radius: 42px;
+    font-size: 135%;
+  }
+
+  .bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 44px 15px 0;
+    border-color: transparent #FFFFFF;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -44px;
+    top: 90px;
+  }
+}
+/*speech bubble styles for large tablets/small desktops*/
+@media only screen and (min-width: 768px) {
+  .bubble {
+    position: relative;
+    margin: 3% 1%;
+    width: 53%;
+    padding: 70px 15px;
+    background: #FFFFFF;
+    -webkit-border-radius: 42px;
+    -moz-border-radius: 42px;
+    border-radius: 42px;
+    font-size: 200%;
+  }
+
+  .bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 44px 15px 0;
+    border-color: transparent #FFFFFF;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -44px;
+    top: 90px;
+  }
+}
+
+/*speech bubble styles for desktop*/
+@media only screen and (min-width: 1050px) {
+  .bubble {
+    position: relative;
+    margin: 4% 2%;
+    width: 53%;
+    padding: 70px 35px;
+    background: #FFFFFF;
+    -webkit-border-radius: 42px;
+    -moz-border-radius: 42px;
+    border-radius: 42px;
+    font-size: 225%;
+  }
+
+  .bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 19px 44px 19px 0;
+    border-color: transparent #FFFFFF;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -44px;
+    top: 100px;
+  }
+}
+
+.header {
+  text-align: center;
+}
+
+/*send button animations and styles*/
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+
+.submit:hover {
+	color: #3498db;
+}
+
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: 1.0s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+/*Change size of the message box */
+textarea {
+  width: 100%;
+  height: 175px;
+  padding: 12px 20px;
+  padding-left: 30px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+/*icons for different inputs*/
+input[name="name"] {
+  background-color: white;
+  background-image: url('images/nameicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+input[name="email"] {
+  background-color: white;
+  background-image: url('images/emailicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+input[name="number"] {
+  background-color: white;
+  background-image: url('images/phoneicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+textarea[name="message"] {
+  background-color: white;
+  background-image: url('images/messageicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+/*adjusts footer padding according to screen size */
+@media only screen and (min-width: 768px) {
+  .footer .row {
+    display: flex;
+    justify-content: center;
+    padding: 0% 5%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer .row {
+    display: flex;
+    justify-content: center;
+    padding: 0% 11%;
+  }
+}
