@@ -35,6 +35,3 @@ function footerFunction3() {
         x.className = "footer-nav-list-3";
     }
 }
-
- 
-
