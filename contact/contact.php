@@ -15,9 +15,17 @@ $body_message .= 'Message: '.$field_message;
 $headers = "From: esther@beargarden4kids.com";
 $headers .= "\r\nReply-To: $field_email";
 
-$mail_status = mail($to, $subject, $body_message, $headers);
+if(isset($_POST['url']) && $_POST['url'] == ''){
 
-if ($mail_status) { ?>
+	if(!($_POST['email'] && !preg_match( "/[\r\n]/", $_POST['email'])) ) {
+	  $headers = "From: $youremail";
+	}
+
+	$mail_status = mail($to, $subject, $body_message, $headers);
+} ?>
+
+<?php
+if($mail_status) { ?>
 	<script language="javascript" type="text/javascript">
 		alert('Thank you for the message. We will contact you shortly.');
 		window.location = 'index.html';
