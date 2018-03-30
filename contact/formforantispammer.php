@@ -12,7 +12,6 @@ $body_message .= 'E-mail: '.$field_email."\n";
 $body_message .= 'Phone number: '.$field_number."\n";
 $body_message .= 'Message: '.$field_message;
 
-$headers = "From: esther@beargarden4kids.com";
 $headers .= "\r\nReply-To: $field_email";
 
 if(isset($_POST['url']) && $_POST['url'] == ''){
