@@ -85,11 +85,10 @@ background: url(../images/background.png) repeat center center fixed;
     .col-t-12 {width: 100%;}
 }
 
-.container table.row{
+.container .row{
     display: flex;
     justify-content: center;
 }
-
 
 .container {
     padding-top: 5em;
@@ -102,11 +101,6 @@ background: url(../images/background.png) repeat center center fixed;
 
 table {
     border-collapse: collapse;
-}
-
-.header {
-    padding-bottom: 2em;
-    text-align: center;
 }
 
 th {

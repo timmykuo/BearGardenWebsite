@@ -14,13 +14,13 @@ $body_message .= 'Message: '.$field_message;
 
 $headers = "Reply-To: $field_email";
 
-if(isset($_POST['url']) && $_POST['url'] == ''){
-
+if(isset($_POST['url']) && $_POST['url'] == '' && isset($_POST['phonenumber']) && $_POST['phonenumber'] == ''){
 	$mail_status = mail($to, $subject, $body_message, $headers);
+	$is_spam = True;
 } ?>
 
 <?php
-if($mail_status) { ?>
+if($mail_status || $is_spam) { ?>
 	<script language="javascript" type="text/javascript">
 		alert('Thank you for the message. We will contact you shortly.');
 		window.location = 'index.html';

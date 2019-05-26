@@ -10,6 +10,15 @@ html {
   font-size: 15px;
 }
 
+body {
+background: url(../images/background.png) repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-style: none;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -101,6 +110,33 @@ html {
   }
 }
 
+.container .row{
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    padding-top: 5em;
+    padding-bottom: 3%;
+}
+
+.container .themes tr{
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 150%;
+    text-align: left;
+    color: blue;
+}
+
+th, td {
+    padding: 15px;
+}
+
 
 /*styles for parent workshop */
-

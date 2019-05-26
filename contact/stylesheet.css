@@ -270,8 +270,11 @@ input[type=submit]:hover {
   width:100%;
   background-color:white;
 }
-
-.antispam {
+/*anti-s-word*/
+input[type=text].url, input[type=text].phonenumber {
+  display: none;
+}
+.url, .phonenumber {
   display: none;
 }
 
