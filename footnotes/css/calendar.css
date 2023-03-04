@@ -94,6 +94,11 @@ background: url(../images/background.png) repeat center center fixed;
     justify-content: center;
 }
 
+.container {
+    padding-top: 5em;
+    padding-bottom: 20%;
+}
+
 table, th {
     text-align: left;
 }
